@@ -1,0 +1,16 @@
+*{
+    margin: 0; 
+    padding: 0;
+    margin:0px;      
+}
+
+.container {
+    width: 100%;
+}
+
+
+/* Banner */
+.banner {
+    opacity: 80%;
+    height: 70%;
+}
