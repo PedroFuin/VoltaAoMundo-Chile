@@ -1,16 +1,30 @@
 *{
     margin: 0; 
-    padding: 0;
-    margin:0px;      
+    padding: 0;    
 }
 
-.container {
-    width: 100%;
+.carousel {
+    height: 150vh;  
 }
 
+.div-header {
+    position: relative;
+    height: 150vh;
+}
+
+.div-header h1 {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    color: white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 3.5em;
+}
 
 /* Banner */
 .banner {
     opacity: 80%;
-    height: 70%;
+    width: 100%;
 }
