@@ -3,28 +3,65 @@
     padding: 0;    
 }
 
-.carousel {
-    height: 150vh;  
+.carousel-inner {
+    height: 90vh;  
 }
 
 .div-header {
     position: relative;
-    height: 150vh;
 }
 
 .div-header h1 {
     position: absolute;
-    top: 20%;
+    top: 30%;
     left: 50%;
     transform: translateX(-50%);
     z-index: 1;
     color: white;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: URW Chancery L, cursive;
     font-size: 3.5em;
+    text-shadow: rgb(39, 39, 39) 1px 0 10px;
+}
+
+.div-header h2 {
+    position: absolute;
+    top: 42%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    color: white;
+    font-size: 1.2em;
+    text-shadow: rgb(39, 39, 39) 1px 0 10px;
 }
 
 /* Banner */
 .banner {
     opacity: 80%;
     width: 100%;
+    filter: brightness(0.70) opacity(0.90);
+}
+
+
+.conteudo{
+    margin-top: 2%;
+    margin-bottom: 5%;
+}
+
+
+.cards{
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+}
+
+.card-img-top{
+    width: 200px;
+    width: 350px;
+}
+
+
+
+.rodape {
+    display: flex;
+    justify-content: center;
+    background-color: rgb(97, 93, 93);
 }
