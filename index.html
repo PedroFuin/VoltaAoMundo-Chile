@@ -3,6 +3,11 @@
 <head>
     <link rel="stylesheet" href="Scripts/Principal.js">
     <link rel="stylesheet" href="Estilos/Principal.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Style+Script&display=swap" rel="stylesheet">
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
@@ -34,14 +39,17 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item active">
-                        <a class="nav-link" href="#">Início <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="#">Início<span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Sobre</a>
+                        <a class="nav-link" href="#">Turismo</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Contato</a>
+                      <a class="nav-link" href="#">Requisitos</a>
                     </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Sobre</a>
+                  </li>
                 </ul>
             </div>
         </nav>
@@ -68,50 +76,59 @@
     </header>
 
     <div class="conteudo">
-        <div class="container">
-            <h1>Conheça o Chile</h1>
-            <h2>Dos Andes ao oceano, a beleza do Chile não tem limites.</h2>
+        <div class="container d-flex justify-content-between">
+            <div class="txt-conteudo">
+              <h1>Conheça o Chile</h1>
+              <h3>Perdido nas cores do Chile, onde cada vista é uma obra-prima.</h3>
 
-            <p>Do extremo norte com o deserto mais seco do mundo, ao sul austral com gelo eterno e quedas de água invertidas, o Chile é um convite difícil de recusar. Aprenda sobre turismo no Chile, e surpreenda-se com as experiências no extremo sul do mundo               
-            </p>
+              <p>Do extremo norte com o deserto mais seco do mundo, ao sul austral com gelo eterno e quedas de água invertidas, o Chile é um convite difícil de recusar. Aprenda sobre turismo no Chile, e surpreenda-se com as experiências no extremo sul do mundo               
+              </p>
+            </div>
 
-            <img src="" alt="">
+            <img id="img1" src="Imagens/img1.jpg" alt="Imagem paisagem">
         </div>
     </div>
 
+    <hr>
+
     <div class="cards container">
         <div class="card-deck">
-            <div class="card">
-              <img class="card-img-top" src="Imagens/card1.jpg" alt="Imagem de capa do card">
-              <div class="card-body">
-                <h5 class="card-title">Turismo</h5>
-                <p class="card-text">Este é um card mais longo com suporte a texto embaixo, que funciona como uma introdução a um conteúdo adicional. Este conteúdo é um pouco maior.</p>
-              </div>
-            </div>
-            <div class="card">
-              <img class="card-img-top" src="Imagens/card2.jpg" alt="Imagem de capa do card">
-              <div class="card-body">
-                <h5 class="card-title">Culinária</h5>
-                <p class="card-text">Este é um card com suporte a texto embaixo, que funciona como uma introdução a um conteúdo adicional.</p>
-              </div>
-            </div>
-            <div class="card">
-              <img class="card-img-top" src="Imagens/card3.jpg" alt="Imagem de capa do card">
-              <div class="card-body">
-                <h5 class="card-title">Cultura</h5>
-                <p class="card-text">Este é um card maior com suporte a texto embaixo, que funciona como uma introdução a um conteúdo adicional. Este card tem o conteúdo ainda maior que o primeiro, para mostrar a altura igual, em ação.</p>
-              </div>
-            </div>
-            <div class="card">
-              <img class="card-img-top" src="Imagens/card4.jpg" alt="Imagem de capa do card">
-              <div class="card-body">
-                <h5 class="card-title">Planos</h5>
-                <p class="card-text">Este é um card maior com suporte a texto embaixo, que funciona como uma introdução a um conteúdo adicional. Este card tem o conteúdo ainda maior que o primeiro, para mostrar a altura igual, em ação.</p>
-              </div>
+
+          <div class="card">
+            <a href="#"><img class="card-img-top" src="Imagens/card1.jpg" alt="Imagem de capa do card"></a>
+            <div class="card-body">
+              <h5 class="card-title">Turismo</h5>
+              <p class="card-text">O Chile encanta com suas paisagens diversificadas, que vão desde desertos até montanhas nevadas, atraindo turistas em busca de aventura e beleza natural única. Suas vinícolas mundialmente famosas e a rica cultura também são pontos de destaque para os viajantes.</p>
             </div>
           </div>
-    </div>
 
+          <div class="card">
+            <a href="#"><img class="card-img-top" src="Imagens/card2.jpg" alt="Imagem de capa do card"></a>
+            <div class="card-body">
+              <h5 class="card-title">Culinária</h5>
+              <p class="card-text">A culinária chilena é uma mistura vibrante de sabores, destacando-se pela influência indígena, espanhola e européia. Pratos como o ceviche, a empanada e o pastel de choclo refletem a rica diversidade gastronômica do país.</p>
+            </div>
+          </div>
+
+          <div class="card">
+            <a href="#"><img class="card-img-top" src="Imagens/card3.jpg" alt="Imagem de capa do card"></a>
+            <div class="card-body">
+              <h5 class="card-title">Cultura</h5>
+              <p class="card-text">
+                A cultura chilena é marcada por sua rica herança indígena e colonial, refletida na música, dança e arte do país. Festivais como o "Cueca" e o "Carnaval de Viña del Mar" celebram essa diversidade cultural de forma vibrante.</p>
+            </div>
+          </div>
+
+          <div class="card">
+            <a href="#"><img class="card-img-top" src="Imagens/card4.jpg" alt="Imagem de capa do card"></a>
+            <div class="card-body">
+              <h5 class="card-title">Viagens</h5>
+              <p class="card-text">Voe para o Chile e descubra um país cheio de contrastes, desde a beleza dos Andes até a serenidade do Oceano Pacífico. Com voos diretos disponíveis de várias cidades ao redor do mundo, o Chile espera por você para uma experiência inesquecível.</p>
+            </div>
+          </div>
+            
+        </div>
+    </div>  
 
     <footer class="rodape">
         <p>2023 &#169 Pedro Fuin - Todos os Direitos Reservados</p>
