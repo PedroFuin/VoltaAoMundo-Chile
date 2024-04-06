@@ -21,13 +21,13 @@
     font-family: 'Times New Roman', Times, serif;
     font-weight: 400;
     font-style: normal;      
-    font-size: 5.5em;
+    font-size: 4.5em;
     text-shadow: rgb(39, 39, 39) 1px 0 10px;
 }
 
 .div-header h2 {
     position: absolute;
-    top: 42%;
+    top: 45%;
     left: 50%;
     transform: translateX(-50%);
     z-index: 1;
@@ -56,8 +56,15 @@
 }
 
 .conteudo2 p{
+    margin-left: 10%;
     margin-top: 15%;
     margin-bottom: 15%;
+}
+
+#img2{
+    padding-top: 8%;
+    width: 35%;
+    height: 35%;
 }
 
 
@@ -104,5 +111,5 @@ hr {
 .rodape {
     display: flex;
     justify-content: center;
-    background-color: rgb(211, 211, 211);
+    background-color: rgb(243, 243, 243);
 }
