@@ -49,6 +49,18 @@
     margin-bottom: 5%;
 }
 
+.conteudo2{
+    background-color: rgb(211, 211, 211);
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.conteudo2 p{
+    margin-top: 15%;
+    margin-bottom: 15%;
+}
+
+
 hr {
     width: 80%;
     margin-left: 10%;
@@ -92,5 +104,5 @@ hr {
 .rodape {
     display: flex;
     justify-content: center;
-    background-color: rgb(97, 93, 93);
+    background-color: rgb(211, 211, 211);
 }
