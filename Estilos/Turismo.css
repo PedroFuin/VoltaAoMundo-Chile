@@ -1,0 +1,127 @@
+*{
+    margin: 0; 
+    padding: 0;    
+}
+
+.carousel-inner {
+    height: 50vh;  
+}
+
+.div-header {
+    position: relative;
+}
+
+.div-header h1 {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 400;
+    font-style: normal;      
+    font-size: 4.5em;
+    text-shadow: rgb(39, 39, 39) 1px 0 10px;
+}
+
+.div-header h2 {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    color: white;
+    font-size: 1.2em;
+    text-shadow: rgb(39, 39, 39) 1px 0 10px;
+}
+
+/* Banner */
+.banner {
+    opacity: 80%;
+    width: 100%;
+    filter: brightness(0.70) opacity(0.90);
+}
+
+
+.conteudo{
+    margin-top: 5%;
+}
+
+.img-turismo{
+    width: 55vh;
+    height: 35vh;
+}
+
+.txt-conteudo{
+    font-size: 1.2em;
+    justify-content: center;
+}
+
+.txt-conteudo h1{
+    color: rgba(211, 5, 5, 0.842);
+    font-family: "Style Script", cursive;
+    font-weight: 400;
+    font-style: normal;      
+    font-size: 2.8em;
+}
+
+hr {
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.item{
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+.photo-gallery {
+    color:#313437;
+    background-color:#fff;
+  }
+  
+  .photo-gallery p {
+    color:#7d8285;
+  }
+  
+  .photo-gallery h2 {
+    font-weight:bold;
+    margin-bottom:40px;
+    padding-top:40px;
+    color:inherit;
+  }
+  
+  @media (max-width:767px) {
+    .photo-gallery h2 {
+      margin-bottom:25px;
+      padding-top:25px;
+      font-size:24px;
+    }
+  }
+  
+  .photo-gallery .intro {
+    font-size:16px;
+    max-width:500px;
+    margin:0 auto 40px;
+  }
+  
+  .photo-gallery .intro p {
+    margin-bottom:0;
+  }
+  
+  .photo-gallery .photos {
+    padding-bottom:20px;
+  }
+  
+  .photo-gallery .item {
+    padding-bottom:30px;
+  }
+  
+
+.rodape {
+    display: flex;
+    justify-content: center;
+    background-color: rgb(243, 243, 243);
+}
