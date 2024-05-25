@@ -1,3 +1,9 @@
+<?php
+    require_once "classes/comentario.php";
+    $comentario=new Comentario();
+    $lista=$comentario->listarComentarios();
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -163,6 +169,24 @@
           Uma experiência única aguarda por você no Chile. ¡Bienvenidos! <br>
         </p>
       </div>
+    </div>
+  </div>
+
+  <div class="cards container">
+  <h2 align="center">Acompanhe nossos comentários</h2>
+    <div class="card-deck">
+    <?php foreach ($lista as $linha):?>
+      <div class="card">
+        <div class="card-body">
+        <p>
+            <h3><?php echo $linha['nome']?></h3>
+            <p>
+              <?php echo $linha['comentario']?>
+            </p>
+        </p>
+        </div>
+      </div>
+    <?php endforeach ?>
     </div>
   </div>
 
