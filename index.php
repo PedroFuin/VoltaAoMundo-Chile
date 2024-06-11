@@ -1,7 +1,7 @@
 <?php
 require_once "classes/comentario.php";
 $comentario = new Comentario();
-$lista = $comentario->listarComentarios();
+$lista = $comentario->listarComentariosAprovados();
 ?>
 
 <!DOCTYPE html>

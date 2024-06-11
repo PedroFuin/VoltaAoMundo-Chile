@@ -13,8 +13,20 @@ class Comentario{
         }
 	}  
 
-    public function listarComentarios(){
+    public function listarComentariosAprovados(){
         $sql="SELECT id, nome, email, comentario, status FROM comentario WHERE status = 2";
+
+        include "classes/conexao.php";
+
+        $resultado=$conexao->query($sql);
+
+        $lista=$resultado->fetchAll();
+
+        return $lista;
+    }
+
+    public function listarComentarios(){
+        $sql="SELECT id, nome, email, comentario, status FROM comentario WHERE status = 1";
 
         include "classes/conexao.php";
 
@@ -47,15 +59,13 @@ class Comentario{
     }
 
     public function aprovar() {
-        // Verificar se o campo "categoria" está vazio
-        if (empty($this->nome) || empty($this->comentario)) {
-            // Se estiver vazio, exibir um alerta e redirecionar para a página anterior
-            echo "<script>alert('Preencha tanto o campo de categoria quanto o campo de resposta antes de aprovar.'); window.location.href = 'adm.php';</script>";
-            exit(); // Interrompe a execução da função
-        }
-    
-        // Se a categoria não estiver vazia, continuar com a atualização
         $sql = "UPDATE comentario SET status = 2 WHERE id=" . $this->id;
+        include "classes/conexao.php";
+        $conexao->exec($sql);
+    }
+
+    public function excluir(){
+        $sql="DELETE FROM comentario WHERE id=".$this->id;
         include "classes/conexao.php";
         $conexao->exec($sql);
     }

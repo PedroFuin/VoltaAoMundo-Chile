@@ -2,7 +2,6 @@
 require_once "classes/comentario.php";
 $comentario = new Comentario();
 $aprovados = $comentario->listarComentariosAprovados();
-$lista = $comentario->listarComentarios();
 ?>
 
 <!DOCTYPE html>
@@ -38,7 +37,7 @@ $lista = $comentario->listarComentarios();
 
     <div class="main-content">
         <div class="header">
-            Novos Comentários em Aguardo
+            Comentários Aprovados
         </div>
 
         <table border="1">
@@ -48,13 +47,12 @@ $lista = $comentario->listarComentarios();
                 <th>Comentário</th>
                 <th id="acoes">Ações</th>
             </tr>
-            <?php foreach ($lista as $linha): ?>
+            <?php foreach ($aprovados as $linha): ?>
                 <tr>
                     <td><?php echo $linha['nome'] ?></td>
                     <td><?php echo $linha['email'] ?></td>
                     <td><?php echo $linha['comentario'] ?></td>
                     <td>
-                        <button id="postar"><a href="comentario-aprovar.php?id=<?= $linha['id'] ?>">Aprovar</a></button>
                         <button class="botaoatualizar"><a
                                 href="comentario-editar.php?id=<?= $linha['id'] ?>">Atualizar</a></button>
                         <button class="botao"><a href="comentario-excluir.php?id=<?= $linha['id'] ?>">Excluir</a></button>
