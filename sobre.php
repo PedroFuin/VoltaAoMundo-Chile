@@ -34,7 +34,7 @@
     <!-- Barra de navegação -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
 
-      <a class="navbar-brand" href="#"><img src="Imagens/logo.png" alt="Logo" width="40px" height="40px"></a>
+      <a class="navbar-brand" href="index.php"><img src="Imagens/logo.png" alt="Logo" width="40px" height="40px"></a>
 
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -44,19 +44,19 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="index.html">Início / </a>
+            <a class="nav-link" href="index.php">Início / </span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="turismo.html">Turismo / </a>
+            <a class="nav-link" href="turismo.php">Turismo / </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="culinaria.html">Culinária / </a>
+            <a class="nav-link" href="culinaria.php">Culinária / </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="cultura.html">Cultura / </a>
+            <a class="nav-link" href="cultura.php">Cultura / </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="sobre.html">Sobre</a>
+            <a class="btn btn-primary" href="login.php">Login </a>
           </li>
         </ul>
       </div>

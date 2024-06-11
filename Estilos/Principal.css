@@ -105,7 +105,9 @@ hr {
     width: 350px;
 }
 
-
+#btn-comentario{
+    width: 100%;
+}
 
 
 .rodape {

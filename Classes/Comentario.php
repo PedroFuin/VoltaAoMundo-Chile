@@ -26,9 +26,7 @@ class Comentario{
     }
 
     public function inserir(){
-        $sql="INSERT INTO comentario (nome, email, comentario) VALUES(
-            '{$this->nome}',
-            '{$this->email}',
+        $sql="INSERT INTO comentario (comentario) VALUES(
             '{$this->comentario}'
             )";
     include "Classes/conexao.php";
