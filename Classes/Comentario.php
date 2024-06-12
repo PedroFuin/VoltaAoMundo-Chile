@@ -37,6 +37,18 @@ class Comentario{
         return $lista;
     }
 
+    public function listarComentariosUsuario(){
+        $sql="SELECT id, nome, email, comentario, status FROM comentario WHERE status = 1";
+
+        include "Classes/conexao.php";
+
+        $resultado=$conexao->query($sql);
+
+        $lista=$resultado->fetchAll();
+
+        return $lista;
+    }
+
     public function inserir(){
         $sql="INSERT INTO comentario (comentario) VALUES(
             '{$this->comentario}'
