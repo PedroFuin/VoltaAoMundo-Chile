@@ -1,0 +1,17 @@
+[
+    {
+        "nome": "João Silva",
+        "email": "joao.silva@example.com",
+        "comentario": "Muito bom!"
+    },
+    {
+        "nome": "Maria Souza",
+        "email": "maria.souza@example.com",
+        "comentario": "Achei interessante."
+    },
+    {
+        "nome": "Carlos Pereira",
+        "email": "carlos.pereira@example.com",
+        "comentario": "Pode melhorar."
+    }
+]

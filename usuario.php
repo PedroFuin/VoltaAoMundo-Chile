@@ -24,34 +24,27 @@ $lista = $comentario->listarComentariosUsuario();
         </div>
         <hr>
         <div class="suggestions-section">
-            <h2><a href="usuario.php">Seus Comentários</a><br></h2>
-            <hr>
-            <h2><a href="comentario-inserir.php">Faça um Comentário</a><br><br></h2>
-            <hr>
-            <h2><a href="index.php">Sair</a></h2>
+            <h2><a href="index.php">Sair</a><br><br></h2>
         </div>
     </div>
 
     <div class="main-content">
         <div class="header">
-            Seus Comentários
+            Novo Comentário
         </div>
 
         <table border="1">
             <tr>
                 <th>Comentário</th>
-                <th id="acoes">Ações</th>
             </tr>
-
-            <?php foreach ($lista as $linha): ?>
-                <tr>
-                    <td><?php echo $linha['comentario'] ?></td>
-                    <td>
-                        <button class="botao"><a href="usuario-editar.php?id=<?= $linha['id'] ?>">Atualizar</a></button>
-                    </td>
-                </tr>
-            <?php endforeach ?>
         </table>
+
+        <form action="comentario-gravar.php" method="POST">
+
+            <input type="text" name="comentario" id="comentario">
+            <input type="submit" value="Inserir" id="botaoinserir">
+            
+        </form>
     </div>
 </body>
 

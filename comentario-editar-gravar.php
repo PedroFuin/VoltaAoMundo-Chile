@@ -2,6 +2,7 @@
     require_once "classes/Comentario.php";
     require_once "classes/Usuario.php";
 
+    $id=$_POST['id'];
     $comentario=new Comentario();
     $usuario=new Usuario();
     
@@ -9,7 +10,7 @@
     $usuario->email=$_POST['email'];
     $comentario->comentario=$_POST['comentario'];
 
-    $comentario->inserir();
+    $comentario->atualizar();
 
     header("refresh:0.8; URL=usuario.php");
 ?>

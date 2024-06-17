@@ -32,17 +32,13 @@ $lista = $comentario->listarComentarios();
         </div>
         <hr>
         <div class="suggestions-section">
-            <h2><a href="comentario-importar.php">Importar Comentários</a><br><br></h2>
-        </div>
-        <hr>
-        <div class="suggestions-section">
             <h2><a href="index.php">Sair</a><br><br></h2>
         </div>
     </div>
 
     <div class="main-content">
         <div class="header">
-            Novos Comentários em Aguardo
+            Atualizar Comentário
         </div>
 
         <table border="1">
@@ -52,20 +48,18 @@ $lista = $comentario->listarComentarios();
                 <th>Comentário</th>
                 <th id="acoes">Ações</th>
             </tr>
-            <?php foreach ($lista as $linha): ?>
-                <tr>
-                    <td><?php echo $linha['nome'] ?></td>
-                    <td><?php echo $linha['email'] ?></td>
-                    <td><?php echo $linha['comentario'] ?></td>
-                    <td>
-                        <button id="postar"><a href="comentario-aprovar.php?id=<?= $linha['id'] ?>">Aprovar</a></button>
-                        <button class="botaoatualizar"><a
-                                href="comentario-editar.php?id=<?= $linha['id'] ?>">Atualizar</a></button>
-                        <button class="botao"><a href="comentario-excluir.php?id=<?= $linha['id'] ?>">Excluir</a></button>
-                    </td>
-                </tr>
-            <?php endforeach ?>
         </table>
+
+        <form action="comentario-editar-gravar.php" method="POST">
+            <input type="hidden" name="id" value="<?= $comentario->id ?>">
+            <input type="text" id="nome" name="nome" value="<?=$comentario->nome?>">
+            <input type="text" id="email" name="email" value="<?=$comentario->email?>">
+            <input type="text" id="comentario" name="comentario" value="<?= $comentario->comentario?>">
+
+
+            <input type="submit" value="Atualizar" id="atualizar">
+        </form>
+
     </div>
 </body>
 
