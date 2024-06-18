@@ -8,3 +8,5 @@ Funcionalidades:
  -Senha Criptografada: As senhas dos usuários são armazenadas no banco de dados de forma criptografada.
  -Envio de Comentários: Usuários logados podem enviar comentários sobre o conteúdo do site.
  -Painel Administrativo: Administradores podem aprovar, rejeitar ou modificar comentários enviados pelos usuários.
+
+Desenvolvido por Pedro Henrique Fuin no 3º Semestre de DSM na Fatec Itapira.

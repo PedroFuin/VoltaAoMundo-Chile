@@ -77,7 +77,7 @@ class Comentario{
                 nome='{$this->nome}',
                 email='{$this->email}',
                 comentario='{$this->comentario}'
-            WHERE id={$this->id}";
+            WHERE id=".$this->id;
         
         include "Classes/conexao.php";
         $conexao->exec($sql);

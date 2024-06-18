@@ -3,13 +3,13 @@
     require_once "classes/Usuario.php";
 
     $comentario=new Comentario();
-    $usuario=new Usuario();
     
-    $usuario->nome=$_POST['nome'];
-    $usuario->email=$_POST['email'];
+    $comentario->nome=$_POST['nome'];
+    $comentario->email=$_POST['email'];
     $comentario->comentario=$_POST['comentario'];
 
     $comentario->inserir();
+    echo '<script>alert("Comentário feito com sucesso!");</script>';
 
     header("refresh:0.8; URL=usuario.php");
 ?>

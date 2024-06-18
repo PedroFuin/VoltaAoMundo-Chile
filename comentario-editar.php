@@ -1,12 +1,10 @@
 <?php
-require_once "classes/comentario.php";
+require_once "Classes/Comentario.php";
 $comentario = new Comentario();
-$aprovados = $comentario->listarComentariosAprovados();
-$lista = $comentario->listarComentarios();
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
@@ -14,6 +12,7 @@ $lista = $comentario->listarComentarios();
     <title>Novos Comentários</title>
     <link rel="stylesheet" href="Estilos/adm.css">
     <link rel="shortcut icon" type="imagex/png" href="Imagens/icone.ico">
+
 </head>
 
 <body>
@@ -41,22 +40,20 @@ $lista = $comentario->listarComentarios();
             Atualizar Comentário
         </div>
 
-        <table border="1">
-            <tr>
-                <th>Nome</th>
-                <th>Email</th>
-                <th>Comentário</th>
-                <th id="acoes">Ações</th>
-            </tr>
-        </table>
-
         <form action="comentario-editar-gravar.php" method="POST">
-            <input type="hidden" name="id" value="<?= $comentario->id ?>">
-            <input type="text" id="nome" name="nome" value="<?=$comentario->nome?>">
-            <input type="text" id="email" name="email" value="<?=$comentario->email?>">
-            <input type="text" id="comentario" name="comentario" value="<?= $comentario->comentario?>">
-
-
+            <div class="form-group">
+                <label for="exampleInputEmail1">Nome:</label>
+                <input type="text" class="form-control" id="nome" name="nome" value="<?= $comentario->nome ?>">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">Email:</label>
+                <input type="email" class="form-control" id="email" name="email" value="<?= $comentario->email ?>">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">Comentário:</label>
+                <textarea type="text" class="form-control" id="comentario" name="comentario" rows="6"
+                    value="<?= $comentario->comentario ?>"></textarea>
+            </div>
             <input type="submit" value="Atualizar" id="atualizar">
         </form>
 

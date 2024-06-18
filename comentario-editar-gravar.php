@@ -4,10 +4,9 @@
 
     $id=$_POST['id'];
     $comentario=new Comentario();
-    $usuario=new Usuario();
     
-    $usuario->nome=$_POST['nome'];
-    $usuario->email=$_POST['email'];
+    $comentario->nome=$_POST['nome'];
+    $comentario->email=$_POST['email'];
     $comentario->comentario=$_POST['comentario'];
 
     $comentario->atualizar();
