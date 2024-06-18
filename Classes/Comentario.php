@@ -50,12 +50,25 @@ class Comentario{
     }
 
     public function inserir(){
-        $sql="INSERT INTO comentario (comentario) VALUES(
+        $sql="INSERT INTO comentario (nome, email, comentario) VALUES(
+            '{$this->nome}',
+            '{$this->email}',
             '{$this->comentario}'
             )";
     include "Classes/conexao.php";
     $conexao->exec($sql);
-    echo "Registro gravado com sucesso!";
+    header("refresh:0.8; URL=usuario.php");
+    }
+
+    public function importar(){
+        $sql="INSERT INTO comentario (nome, email, comentario) VALUES(
+            '{$this->nome}',
+            '{$this->email}',
+            '{$this->comentario}'
+            )";
+    include "Classes/conexao.php";
+    $conexao->exec($sql);
+    header("refresh:0.8; URL=adm.php");
     }
 
 

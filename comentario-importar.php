@@ -1,36 +1,23 @@
 <?php
-include_once "classes/conexao.php";
+require_once 'Classes/Comentario.php';
 
-// Define o caminho para o arquivo JSON
-$jsonFile = 'JSON/comentarios.json';
+$url = 'JSON/comentarios.json';
 
-// Lê o conteúdo do arquivo JSON
-$jsonData = file_get_contents($jsonFile);
+$json = file_get_contents($url);
 
-// Decodifica o JSON para um array associativo
-$comentarios = json_decode($jsonData, true);
+$data = json_decode($json, true);
 
-if ($comentarios && is_array($comentarios)) {
-    // Preparação da consulta SQL
-    $stmt = $conn->prepare("INSERT INTO comentarios (nome, email, comentario) VALUES (?, ?, ?)");
+foreach ($data as $linha) {
+    $importar = new Comentario();
 
-    // Bind de parâmetros
-    $stmt->bind_param("sss", $nome, $email, $comentario);
+    $nome = $linha['nome'];
+    $email = $linha['email'];
+    $comentario = $linha['comentario'];
 
-    // Inserção dos dados no banco de dados
-    foreach ($comentarios as $comentarioData) {
-        $nome = $comentarioData['nome'];
-        $email = $comentarioData['email'];
-        $comentario = $comentarioData['comentario'];
-        $stmt->execute();
-    }
+    $importar->nome = $nome;
+    $importar->email = $email;
+    $importar->comentario = $comentario;
 
-    echo "Dados inseridos com sucesso!";
-} else {
-    echo "Erro ao decodificar o arquivo JSON.";
+    $importar->importar();
 }
-
-// Fechamento da conexão
-$stmt->close();
-$conn->close();
 ?>
